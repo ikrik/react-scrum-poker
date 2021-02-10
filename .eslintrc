@@ -1,0 +1,107 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "arrowFunctions": true
+    }
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["'./src"]
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/semi": ["off"],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/typedef": [
+      "off",
+      {
+        "memberVariableDeclaration": true,
+        "arrowParameter": true
+      }
+    ],
+
+    "quotes": ["error", "single"],
+
+    "array-type": "off",
+    "arrow-parens": "error",
+    "callable-types": "off",
+    "comma-dangle": "off",
+
+    "interface-over-type-literal": "off",
+    "interface-name-prefix": "off",
+
+    "max-classes-per-file": ["error", 5],
+    "max-len": [
+      "warn",
+      {
+        "code": 160,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "member-ordering": "off",
+
+    "no-console": "warn",
+    "no-duplicate-imports": "error",
+    "no-empty": "error",
+    "no-empty-interface": "off",
+    "no-fallthrough": "warn",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "warn",
+    "no-string-literal": "off",
+    "no-var-requires": "off",
+    "no-unsafe-any": "off",
+    "no-unneeded-ternary": "error",
+
+    "object-literal-sort-keys": "off",
+    "object-literal-key-quotes": "off",
+    "only-arrow-functions": "off",
+
+    "prefer-object-spread": "off",
+    "prefer-template": "off",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/no-unused-state": "off",
+    "react/display-name": ["off", { "ignoreTranspilerName": true }],
+    "react/destructuring-assignment": ["off", { "ignoreClassFields": true }],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": ["children"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+
+    "semi": "off"
+  }
+}
